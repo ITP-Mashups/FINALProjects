@@ -1,0 +1,56 @@
+
+h1{
+    font-family: 'Montserrat', arial, sans-serif;
+	font-size: 52px;
+	color: #F2F1F2;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 80px;
+
+}
+
+body{
+	margin-left: 200;
+    margin-right: auto;
+    text-align: center;
+    background-color: #1E1D1E;
+}
+
+
+#inputField {
+	width: 800px;
+    padding: 14px 20px;
+    margin: 20px 2px;
+    box-sizing: border-box;
+    font-size: 20px;
+	font-family: 'Varela Round', arial, sans-serif;
+}
+
+#btn {	
+	font-family: 'Varela Round', arial, sans-serif;
+	background-color: #F2F1F2;
+  	border: none;
+	display: inline-block;	
+	font-size: 14px;
+	font-weight: 100;
+	text-decoration: none;
+	letter-spacing: 1px;
+	color: black;
+	padding: 18px 18px;
+
+}
+
+.fotorama__wrap, .fotorama__html div{
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+
+figcaption {
+	font-family: 'Varela Round', arial, sans-serif;
+	font-size: 28px;
+	margin-top: 330px;
+	color:#F2F1F2;
+}
+
+
