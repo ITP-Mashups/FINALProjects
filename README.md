@@ -7,7 +7,7 @@ Client-side web development.
 At least one public web API as a data source
 At least one javascript “interaction” library
 Bonus: database storage
-![Beer & Dessert Pairings](FinalAPIProject/screenshot.png)
+![Beer & Dessert Pairings](https://github.com/lanimc/FinalAPIProject/blob/master/screenshot.png)
 For my final project I continued to refine the BreweryDB - Yummly API call. 
 Users enter a search word (top right of the page) that searches all BreweryDB data for beers containing the entered word.
 Users can then click on the results, represented by their labels or default image of beer (center of the page) for more information about the beer.
