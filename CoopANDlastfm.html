@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width">
+		<title>Sound and color with me</title>
+		<link rel="stylesheet" type="text/css" href="CoopANDlastfm.css"/>
+		<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css"/>
+	</head>
+	<body>
+		<h2>ALBUM COVER GENERATOR</h2>
+		<h3> mash artworks from the Cooper-Hewitt Collection and songs based on color </h3>
+		<input id="query" type="text" placeholder="ENTER A COLOR"></input>
+		<button class="aButton" id="search">SUBMIT</button>
+		<div id="images"></div>
+		<div id="searchResults" class="ui-widget-content"> </div>
+		<button class="bButton" id="saveCanvas">SAVE YOUR COVER!</button>
+		<button class="cButton" id="tintButton">Tint your image!</button>
+		<div id = "sketchHolder"></div>
+		<div id="Bowlby"><link href='https://fonts.googleapis.com/css?family=Bowlby One SC' rel='stylesheet'> </div>
+		<div id="Muli"><link href='https://fonts.googleapis.com/css?family=Saira' rel='stylesheet'> </div>
+		<div id="Saira"><link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet'> </div>
+		<form id="myform">
+    		<select id="fonts"> 
+       			<option value="Arial">Arial</option>
+        		<option value="Verdana ">Verdana </option>
+        		<option value="Impact ">Impact </option>
+        		<option value="Futura">Futura</option>
+        		<option value="Bowlby One SC">Bowlby</option>
+        		<option value="Saira">Saira</option>
+        		<option value="Muli">Muli</option>
+   			 </select>
+				<select id="size">
+       			<option value="30">30</option>
+        		<option value="60">60</option>
+        		<option value="90">90</option>
+        		<option value="120">120</option>
+        		</select>
+        	<select id="color">
+        		<option value="green">green</option>
+        		<option value="purple">purple</option>
+        		<option value="white">purple</option>
+        		<option value="gray">purple</option>
+        		<option value="black">purple</option>
+
+    		</select> --> 
+		</form> 
+
+    		</select>
+		</form>
+		<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+ 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.min.js"></script>
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.sound.min.js"></script>
+		<script src="p5play.js"></script>
+		<script>
+			//Code to be executed once the page has fully loaded
+			$(document).ready(function(){
+				console.log("LOADED!!!!");
+				app.initialize();
+			});		
+		</script>
+	</body>
+</html>
