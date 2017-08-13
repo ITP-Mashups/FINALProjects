@@ -1,0 +1,134 @@
+ 
+html{
+  margin: 0;
+  padding: 0;
+/*  background-color: black*/;
+  font-family: 'Georgia', Georgia, sans-serif;
+  color: white;
+  font-size: 12px;
+}
+
+body {
+    background-image: url("Red_Sox3.png");
+    background-color: #050514;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+}
+
+iframe {
+	display: block;
+	max-width: 100%;
+  	margin: auto;
+
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+
+  -moz-box-shadow: 4px 4px 14px white;
+  -webkit-box-shadow: 4px 4px 14px white;
+  box-shadow: 4px 4px 14px white;
+}
+
+canvas{
+	display:block;
+	margin: 5px auto;
+	border: 1px solid gray;
+}
+
+h1 { 
+	margin:10px;
+	padding: 4px;
+	/*background-color: black;*/
+	font-family: 'Georgia', Georgia, sans-serif;
+	color: white;
+	font-size: 30px;
+	text-align: left;
+}
+
+h2 { 
+	margin-left: 20px;
+	padding: 0;
+	/*background-color: black;*/
+	font-family: 'Georgia', Georgia, sans-serif;
+	color: white;
+	font-size: 14px;
+	text-align: left;
+}
+
+h3 { 
+	margin-left: 30px;
+	padding: 0;
+	/*background-color: black;*/
+	font-family: 'Georgia', Georgia, sans-serif;
+	color: white;
+	font-size: 12px;
+	text-align: left;
+}
+
+h4 { 
+	margin-left: 40px;
+	padding: 0;
+	/*background-color: black;*/
+	font-family: 'Georgia', Georgia, sans-serif;
+	color: white;
+	font-size: 9px;
+	text-align: left;
+}
+
+.funFacts { 
+	margin-left: 40px;
+	padding: 0;
+	/*background-color: black;*/
+	font-family: 'Georgia', Georgia, sans-serif;
+	color: white;
+	font-size: 14px;
+	text-align: left;
+}
+
+.funFacts2 { 
+	margin-left: 60px;
+	padding: 0;
+	/*background-color: black;*/
+	font-family: 'Georgia', Georgia, sans-serif;
+	color: white;
+	font-size: 14px;
+	text-align: left;
+}
+
+img{
+	display: block;
+	max-width: 50%;
+	margin: auto;
+	height: auto;
+	opacity: 1;
+	-webkit-filter: drop-shadow(10px 10px 10px white);
+    filter: alpha(opacity=100), drop-shadow(10px 10px 10px white);
+
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+}
+
+
+
+.img2 {
+	display: block;
+	max-width: 30%;
+	margin: auto;
+	height: auto;
+	opacity: 1;
+	-webkit-filter: drop-shadow(5px 5px 5px grey);
+    filter: alpha(opacity=100), drop-shadow(5px 5px 5px grey);
+
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+
+svg{
+	background-color: pink;
+}
+
+
+
+
