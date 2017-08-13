@@ -2,7 +2,7 @@
 Project Requirements:
 Create a single page (client-side only) web experience that ideally leverages data from at least one public web API and incorporates the use of at least one Javascript “interaction” library, such as p5, D3, Three, etc.
 
-Cheklist:
+Checklist:
 
 Client-side web development.
 
@@ -22,20 +22,20 @@ Users can double click on the results  to look for related desserts that have si
 Users can click on the dessert search results, represented by circles in the dessert information section at the bottom right hand of the page for more information on the dessert.
 
 
-The challenges I faced were in designing a visual representation of the data and making the user interaction experience interesting but still usefull. Adding text made the page very wordy and busy very quickly so I had to strike a balance on how to display the text based on user interaction and some css styling.
+The challenges I faced were in designing a visual representation of the data and making the user interaction experience interesting but still useful. Adding text made the page very wordy and busy very quickly so I had to strike a balance on how to display the text based on user interaction and some css styling.
 
-I settled on using the D3 library for user interaction, as I as already familiar with it. I wanted to incorporate the circle pack layout, which I hadn't used before but had a lot of challenges getting th edata into the shape I needed. Initially, I settled on the force directed layout which had a nice simulation effect for the user to manuever through the beer search results. This ended up being better than my original circle pack idea, so I stuck with it for the final design. 
-I did finaly figure out the data heirarchy needed for the pack layout and used it for the dessert results. 
+I settled on using the D3 library for user interaction, as I as already familiar with it. I wanted to incorporate the circle pack layout, which I hadn't used before but had a lot of challenges getting the data into the shape I needed. Initially, I settled on the force directed layout which had a nice simulation effect for the user to maneuver through the beer search results. This ended up being better than my original circle pack idea, so I stuck with it for the final design. 
+I did finally figure out the data hierarchy needed for the pack layout and used it for the dessert results. 
 
 Coding challenges:
 
-data preparation - working with object heirarchies
+data preparation - working with object hierarchies
 
 managing missing data - lesson learned: data is always missing
 
-images - adding images to svg and then styling them ended up being a major challenge. for the default images, i ended up styling the default in its raw formt and adding the styled default picture. 
+images - adding images to svg and then styling them ended up being a major challenge. for the default images, i ended up styling the default in its raw format and adding the styled default picture. 
 
-textrazor call - the text analysis could use a lot more tinkering. namely filtering resulting entities against the yummly ingredient list for better dessert search results. As the Yummly call didn't support or searches, many searches were coming up null. I also ran up against the text razor limits on some days, which hampered design efforts.
+textrazor call - the text analysis could use a lot more tinkering. namely filtering resulting entities against the Yummly ingredient list for better dessert search results. As the Yummly call didn't support or searches, many searches were coming up null. I also ran up against the text razor limits on some days, which hampered design efforts.
 
 interaction - refining the interaction required quality time with the d3 wiki and some useful examples on bl.ocks.org.
 I have to site: https://bl.ocks.org/mbostock/4063530 and http://bl.ocks.org/eesur/be2abfb3155a38be4de4 for their contribution to the final work.
@@ -44,19 +44,19 @@ future work - there is a lot that I could refine on the project.
 
 I think some additional work on: 
 
-Media queries to make the site more responsive
+<ul><li>Media queries to make the site more responsive</li>
 
-A call for the actual recipie or video on youtube on how to make the recipie 
+<li>A call for the actual recipe or video on youtube on how to make the recipe</li> 
 
-Grouping the beers and desserts by flavor
+<li>Grouping the beers and desserts by flavor</li>
 
-Incorporating the dessert images
+<li>Incorporating the dessert images</li>
 
-Incorporating a bar graph or other visual or filter for the dessert flavors
+<li>Incorporating a bar graph or other visual or filter for the dessert flavors</li>
 
-A transition on the selected beer to blow up the label and make it more prominent
+<li>A transition on the selected beer to blow up the label and make it more prominent</li>
 
-Another brewery call for the beer ingridents and flavors
+<li>Another brewery call for the beer ingredients and flavors</li></ul>
 
 
 
