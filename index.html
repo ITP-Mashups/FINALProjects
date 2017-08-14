@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RiTa Experiment</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="960_16_col.css">
+	<link rel="stylesheet" type="text/css" href="960_12_col.css">
+	<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+	<script src="rita-full.min.js"></script>
+	<script src="script.js"></script>
+</head>
+<body>
+	<div class = "container_12">
+		<div class = "title grid_12">Poem Randomizer</div>
+		<div class = "controls grid_12">
+			<label class = "directions">Search for a poem and randomize adjectives, nouns and verbs!</label>
+			<input type = "text" class = "searchField">
+			<input type = "button" value = "Poetry" class = "searchButton">
+		</div>
+		<div class = "poemDiv grid_6"></div>
+		<div class = "resultsPoem grid_6"></div>
+		<div class = "resultsControls grid_12">
+			<input type = "checkbox" name = "adjectives" id = "checkAdj">Adjectives
+			<input type = "checkbox" name = "nouns" id = "checkNns">Nouns
+			<input type = "checkbox" name = "verbs" id = "checkVbs">Verbs<br>
+			<input type = "button" value = "Randomize!" id = "randBtn">
+		</div>
+		<div class = "foot grid_12">
+			<p class = "disclaimer">The randomizer app is powered by <a href = "http://poetrydb.org/index.html" target = "_blank">PoetryDB.org</a> and the selection is limited to the pieces they provide. Feel free to browse their collection by <a href = "http://poetrydb.org/title" target = "_blank">title</a> or by <a href = "http://poetrydb.org/author" target = "_blank">author</a></p>
+		</div>
+	</div>
+</body>
+</html>
