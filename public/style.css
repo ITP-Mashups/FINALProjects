@@ -1,0 +1,109 @@
+body {
+	padding: 20px; 
+	margin: 10px;
+	background: linear-gradient(90deg, aqua, hotpink);
+} 
+
+canvas {
+	vertical-align: top;
+} 
+
+input {
+	font-size: 24px;
+	line-height: 30px;
+	height: 30px;
+}
+
+li {
+	padding: 5px 10px;
+	font: 20px Helvetica;
+}
+
+svg {
+	width: 500px;
+	height: 120px;
+}
+
+#chatInput {
+	display: inline-block;
+	vertical-align: top;
+	width: 80%;
+}
+
+#chatSend {
+	background: lightgrey;
+	padding: 4px;
+	margin-left: 2px;
+}
+
+#username {
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 5px;
+	width: 70%;
+}
+
+.info {
+	position: absolute;
+	top: 10;
+	right: 10px;
+}
+
+.fixed_container {
+	position: fixed;
+	width: 40%;
+}
+
+.scrollContainer {
+	float: right;
+	width: 60%;
+}
+
+.button_container {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.ital_text {
+	color: black;
+	font-family: "Helvetica";
+	font-style: italic;
+	font-size: 100%;
+	text-align: left;
+	letter-spacing: 5px;
+	margin-bottom: 7px;
+
+}
+
+.bold_text {
+	color: white;
+	font-family: "Helvetica";
+	font-style: bold;
+	font-size: 450%;
+	text-align: left;
+	letter-spacing: 10px;
+	text-shadow: 3px 2px black;
+
+}
+
+.body_text {
+	color: black;
+	font-family: "Helvetica";
+	font-size: 100%;
+	text-align: left;
+	letter-spacing: 0px;
+	margin-top: 5px;
+
+}
+
+.help_container {
+	text-align: left;
+	position: fixed;
+	bottom: 5px;
+	width: 30%;
+}
+
+.rectangle {
+	fill: lightgrey;
+	opacity: .3;
+}
