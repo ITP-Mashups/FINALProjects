@@ -1,0 +1,241 @@
+h2 {
+	text-align: center;
+	font-family: futura;
+	color:#505050;
+  border-color: #FFFFF0;
+  border-width: 1.5px;
+	padding:0%;
+	font-size: 400%;
+	margin-top: 2%;
+		text-shadow:
+    -1px -1px 0 gray,
+    1px -1px 0 gray,
+    -1px 1px 0 gray,
+    1px 1px 0 gray;
+	}
+
+	h3{
+		text-align: center;
+	font-family: futura;
+	color:#FFFFF0;
+	padding:%;
+	font-size: 200%;
+	margin-top: -5%;
+    position: static;
+    font-weight: thin;
+    opacity: .85;
+    text-shadow:
+    -1px -1px 0 gray,
+    1px -1px 0 gray,
+    -1px 1px 0 gray,
+    1px 1px 0 gray;
+      border-color: #505050;
+
+	}
+
+body {
+	background-image: url("http://theredlist.com/media/database/fine_arts/arthistory/painting/peinture_abstraite/yves-klein/009-yves-klein-theredlist.jpg");
+	background-size:cover;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+	}
+
+.aButton {
+	position:absolute;
+  	top:45%;
+  	left:49%;
+  	margin-top: -25px;
+  	margin-left: -50px;
+  	position: absolute;
+  	font-family: futura;
+  	background-color: #F5F5DC;
+  	color: #505050;
+  	border-color: #505050;
+  	font-size: 25px;
+  	opacity: .9;
+  	text-align:center;
+  	font-weight: thin;
+  	border-width: 1.5px;
+}
+
+
+#query {
+	position:relative;
+  	top:25%;
+ 	left:57%;
+  	margin-top: -25px;
+  	margin-left: -180px;
+  	height: 30px;
+  	width: 200px;
+  	font-family: futura;
+  	background-color: #FFFFF0;
+  	color: #505050;
+  	outline-style: thin;
+  	outline-color: #FFFFF0;
+  	font-size: 20px;
+  	font-weight: thick;
+    opacity: .85;
+    text-align:center;
+  	border-color: #505050;
+  	border-width: 1.5px;
+}
+
+.content {
+	 position: absolute;
+	 top: 50%;
+	 right: 19%;
+}
+
+#searchResults.ui-widget-content {
+background: #000;
+background: none;
+border: none;
+}
+
+
+
+
+#searchResults {
+	text-align: center;
+  top: 75%;
+  left:25%;
+	position: absolute;
+	width: 50%;
+	font-family: futura;
+	font-size: 50px;
+	color:#505050;
+	letter-spacing: .1em;
+	line-height: 45px
+	top: 1em;
+  background-color: rgba(0, 0, 0, 0);
+
+}
+
+#images{
+  max-height: 60%;
+
+   max-width: 60%;
+
+    position: relative;
+    
+}
+
+#size{
+display: block; 
+padding: 2px 40px 2px 6px 
+!important; 
+max-width: 80%; 
+height: 40px; 
+!important; border: 1px 
+solid #e3e3e3; 
+border-radius: 3px; 
+background: url("https://image.ibb.co/iMeAJv/selectbox_arrow.png")
+right center no-repeat; 
+background-color: #fff; 
+color: #444444; 
+font-size: 12px; 
+line-height: 16px !important; 
+appearance: none; /* this is must */ -webkit-appearance: none; -moz-appearance: none; 
+opacity: .95;
+position:absolute;
+top: 70%;
+}
+
+#fonts{
+display: block; 
+padding: 10px 70px 10px 13px 
+!important; max-width: 100%; 
+height: auto 
+!important; border: 20px 
+border: transparent;
+solid #e3e3e3; border-radius: 3px; 
+background: url("https://image.ibb.co/iMeAJv/selectbox_arrow.png") 
+right center no-repeat; 
+background-color: #fff; 
+color: #444444; font-size: 12px; 
+line-height: 16px !important; 
+appearance: none; /* this is must */ -webkit-appearance: none; -moz-appearance: none; 
+opacity: .95;
+padding-bottom: 200px;
+top: 84%;
+position: absolute;
+
+}
+
+#color {
+display: block; 
+padding: 2px 40px 2px 20px 
+!important; 
+max-width: 80%; 
+height: 40px
+!important; 
+border: 1px
+solid #e3e3e3; 
+border-radius: 3px; 
+background: url("https://image.ibb.co/iMeAJv/selectbox_arrow.png")
+right center no-repeat; 
+background-color: #fff; 
+color: #444444; 
+font-size: 12px; 
+line-height: 16px !important; 
+appearance: none; /* this is must */ -webkit-appearance: none; -moz-appearance: none; 
+opacity: .95;
+position:absolute;
+top: 77%;
+
+}
+
+
+
+
+.bButton {
+
+    position:absolute;
+    top:55%;
+    left:45%;
+    margin-top: -25px;
+    margin-left: -50px;
+    position: absolute;
+    font-family: futura;
+    background-color: #F5F5DC;
+    color: #505050;
+    border-color: #505050;
+    font-size: 20px;
+    opacity: .9;
+    text-align:center;
+    font-weight: thin;
+    border-width: 1.5px;
+}
+
+
+
+#sketchHolder {
+
+  left: 30%;
+
+  top: 75%;
+}
+
+#tintButton {
+  display: block; 
+padding: 2px 40px 2px 20px 
+!important; 
+max-width: 80%; 
+height: 40px
+!important; 
+border: 1px
+solid #e3e3e3; 
+border-radius: 3px; 
+background: url("https://image.ibb.co/iMeAJv/selectbox.png")
+right center no-repeat; 
+background-color: #fff; 
+color: #444444; 
+font-size: 12px; 
+line-height: 16px !important; 
+appearance: none; /* this is must */ -webkit-appearance: none; -moz-appearance: none; 
+opacity: .95;
+position:absolute;
+top: 62%;
+}
+
+
