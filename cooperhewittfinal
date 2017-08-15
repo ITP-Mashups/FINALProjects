@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width">
+		<title>The Cooper Hewitt's Collection</title>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<script type="text/javascript" src="script.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat|Varela+Round" rel="stylesheet">
+    	<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    	<link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> 
+    	<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+	</head>
+
+	<body>
+		<h1>Let's view the collection by Year</h1>
+		<input id="inputField" placeholder="Look up a year">
+		<button id="btn">Go</button>
+		<output></output>
+		<script src="script.js"></script>
+		<script src="sketch.js"></script>
+		<script>
+			
+			$(document).ready(function(){
+				console.log("LOADED!!!!");
+				init();
+				
+			});		
+		</script>
+	</body>
+</html>
+#Finals
+
+This is Charmaine Sum's work for 8/10/2017
+
+The idea of this project is to get data from a very interesting api source and allow the users to have a very fun browsing experience. I also want to learn how to use a brand new api that is different from my midterm. I started off by really wanting to use the Marvel API from https://developer.marvel.com/. However, over the entire weekend, I couldnt gain access to the Marvel API because of access issue. What I found out was that they only allow us to access this through the backend. 
+
+So with this not working too well, I have decided to use the Cooper Hewitt API because I know how it works really well.  
+
+With the Cooper Hewitt API, I knew I wanted to explore the vast amount of images that are shown. I wanted to allow the user to experience the images in a fun and interactive way. I first found the library http://camanjs.com/api/ where I wanted to use this to allow the user to edit the images. However, after a whole afternoon of linking the api images to the buttons, I realized that they do not support images that are not pre uploaded. I was really disappointed by this restriction because it was not shown in the documentations.
+
+After this, I decided to try P5 but I also ran into the issue of the preload() images. As the deadline is so close, I decided to look for other fun libraries. What I found was really fun was fotorama. I decided to use a fun image player so that the user can try to experience the art works through a fun gallary format. I also learned how to create a local host on my computer through MAMP PRO.  
+
+I then decided to implement this p5 drawing pad in the bottom to let users copy the images in an abstract format. I was running into the issue of the draw function because I couldn't figure out how to drawn objects from disappearing whenever the code runs.
+
+I think my biggest success was finally finding a library that could work well with the image API. That was a big challenge for me. I wish I could do even more with the images but I think with the limited time, this is a good photo viewing application. I wish I did not look for a new api and just stayed with the pixabay api if I knew it was so diffcult to link images to the librarys. Overall, I enjoyed this project because I learned a lot of new skills and I learned a lot about what are the diffculties to access APIs through the front end side. 
+//Get cooper hewitt api response
+
+function getCooperHewittResponse(date, callback) {
+
+
+  var url = 'https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.search.collection&access_token=ee4c348870e1913e53b7f579832734b0&per_page=20&query=';
+
+  console.log(url);
+  $.getJSON(url + date, function(data){
+ 		callback(data);
+    });
+}
+
+ function init (){
+ 	document.querySelector("button").addEventListener("click", function(){
+ 		var date = document.querySelector("input").value;
+ 		if (!date || date ==="") return;
+ 		getCooperHewittResponse(date, handleData);
+	 });
+}
+
+//img gallery
+
+function handleData (data){
+
+	var html = "<div class='fotorama'\
+						data-width = '700'\
+						data-height = '700' \
+						data-allowfullscreen='true'\
+						data-nav='thumbs'\
+						data-autoplay='true'\
+						data-transition='crossfade'>";
+
+	for (var i=0; i<data.objects.length; i++){
+		var item = data.objects[i];
+		html += "<figcaption>" + item.title +"</figcaption>";
+		html += "<img id='img"+i+"' src='"+item.images[item.images.length-1].sq.url+"'>";
+	}
+
+	html += "</div>";
+
+	document.querySelector("output").innerHTML=html;
+	$(".fotorama").fotorama();	
+}
+
+// p5
+
+var rSlider, gSlider, bSlider;
+var makeSwatch;
+
+function setup() {
+  createCanvas(800, 601);
+  background(255);
+  fill(0);
+  rSlider = createSlider(0, 255, 100);
+  rSlider.position(620,20);
+  gSlider = createSlider(0, 255, 0);
+  gSlider.position(620, 50);
+  bSlider = createSlider(0, 255, 255);
+  bSlider.position(620, 80);
+  
+ stroke(150);
+ strokeWeight(1);
+ 
+beginShape();
+  for (var x = 0; x <=600; x = x + 20) {
+  line (x, 0, x, 600);
+ }
+  for (var y = 0; y <=600; y = y + 20 ){
+  line (0, y, 600, y);
+ }
+endShape(); 
+noLoop();
+mouseDragged();
+
+}
+
+function mouseDragged(){
+  var r = rSlider.value();
+  var g = gSlider.value();
+  var b = bSlider.value();
+  fill(r,g,b);
+  text ("r", 610, 32);
+  text ("g", 610, 62);
+  text ("b", 610, 92);
+  rect (620,120, 40, 40);
+}
+
+function mouseClicked(){
+ if (mouseX>600 || mouseY>600 ) return;  
+ var x = (Math.floor(mouseX/20))*20;
+ var y = (Math.floor(mouseY/20))*20;
+ rect(x, y, 20,20);
+ 
+}
+
+
+ 
+var rSlider, gSlider, bSlider;
+var makeSwatch;
+
+function setup() {
+  createCanvas(800, 601);
+  background(255);
+  fill(0);
+  rSlider = createSlider(0, 255, 100);
+  rSlider.position(620,20);
+  gSlider = createSlider(0, 255, 0);
+  gSlider.position(620, 50);
+  bSlider = createSlider(0, 255, 255);
+  bSlider.position(620, 80);
+  
+ stroke(150);
+ strokeWeight(1);
+ 
+beginShape();
+  for (var x = 0; x <=600; x = x + 20) {
+  line (x, 0, x, 600);
+ }
+  for (var y = 0; y <=600; y = y + 20 ){
+  line (0, y, 600, y);
+ }
+endShape(); 
+noLoop();
+mouseDragged();
+
+}
+
+function mouseDragged(){
+  var r = rSlider.value();
+  var g = gSlider.value();
+  var b = bSlider.value();
+  fill(r,g,b);
+  text ("r", 610, 32);
+  text ("g", 610, 62);
+  text ("b", 610, 92);
+  rect (620,120, 40, 40);
+}
+
+function mouseClicked(){
+ if (mouseX>600 || mouseY>600 ) return;  
+ var x = (Math.floor(mouseX/20))*20;
+ var y = (Math.floor(mouseY/20))*20;
+ rect(x, y, 20,20);
+ 
+}
+
+
+ 
+
+h1{
+    font-family: 'Montserrat', arial, sans-serif;
+	font-size: 52px;
+	color: #F2F1F2;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 80px;
+
+}
+
+body{
+	margin-left: 200;
+    margin-right: auto;
+    text-align: center;
+    background-color: #1E1D1E;
+}
+
+
+#inputField {
+	width: 800px;
+    padding: 14px 20px;
+    margin: 20px 2px;
+    box-sizing: border-box;
+    font-size: 20px;
+	font-family: 'Varela Round', arial, sans-serif;
+}
+
+#btn {	
+	font-family: 'Varela Round', arial, sans-serif;
+	background-color: #F2F1F2;
+  	border: none;
+	display: inline-block;	
+	font-size: 14px;
+	font-weight: 100;
+	text-decoration: none;
+	letter-spacing: 1px;
+	color: black;
+	padding: 18px 18px;
+
+}
+
+.fotorama__wrap, .fotorama__html div{
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+
+figcaption {
+	font-family: 'Varela Round', arial, sans-serif;
+	font-size: 28px;
+	margin-top: 330px;
+	color:#F2F1F2;
+}
+
+
